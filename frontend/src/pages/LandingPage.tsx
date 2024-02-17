@@ -1,14 +1,15 @@
-import { Link } from "@tanstack/react-router";
-import BackgroundDimmed from "../components/BackgroundDimmed";
-import SocialButton from "../components/SocialButton";
-import getImageURL from "../utils/image-util";
+import { Link } from '@tanstack/react-router';
+import BackgroundDimmed from 'components/BackgroundDimmed';
+import Button from 'components/Button';
+import getImageURL from '../utils/image-util';
+import socialMediaEnum from 'modules/enums/socialMedia.enum';
 
 const LandingPage = () => {
   return (
     <>
       <BackgroundDimmed name="main" />
       <div className="flex justify-center mt-16 mb-24">
-        <img src={getImageURL('logo')} alt="log"/>
+        <img src={getImageURL('logo')} alt="log" />
       </div>
       <div className="flex flex-col gap-4 items-center mt-8">
         <Link
@@ -26,12 +27,24 @@ const LandingPage = () => {
         </Link>
       </div>
       <div className="flex justify-center gap-2 mt-8">
-        <SocialButton name="whatsapp"/>
-        <SocialButton name="instagram"/>
-        <SocialButton name="facebook"/>
+        <Button className="rounded-full bg-main text-white w-8 h-8 flex justify-center items-center">
+          <a href={socialMediaEnum.whatsapp}>
+            <img src={getImageURL('whatsapp')} alt="whatsapp" className="h-[1.75rem]" />
+          </a>
+        </Button>
+        <Button className="rounded-full bg-main text-white w-8 h-8 flex justify-center items-center">
+          <a href={socialMediaEnum.instagram}>
+            <img src={getImageURL('instagram')} alt="instagram" className="h-6" />
+          </a>
+        </Button>
+        <Button className="rounded-full bg-main text-white w-8 h-8 flex justify-center items-center">
+          <a href={socialMediaEnum.facebook}>
+            <img src={getImageURL('facebook')} alt="facebook" className="h-6" />
+          </a>
+        </Button>
       </div>
     </>
   );
-}
+};
 
 export default LandingPage;

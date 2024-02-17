@@ -1,4 +1,4 @@
-import { createRootRoute, Outlet } from '@tanstack/react-router'
+import { createRootRoute, Outlet } from '@tanstack/react-router';
 // import { TanStackRouterDevtools } from '@tanstack/router-devtools'
 
 export const Route = createRootRoute({
@@ -9,6 +9,6 @@ export const Route = createRootRoute({
     </>
   ),
   notFoundComponent() {
-    return <p>404 - Page not found!</p>
-  },
-})
+    return <p>404 - Page not found!</p>;
+  }
+});

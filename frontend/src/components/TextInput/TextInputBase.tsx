@@ -7,9 +7,7 @@ interface TextInputBaseProps extends InputHTMLAttributes<HTMLInputElement> {
 const TextInputBase = (props: TextInputBaseProps) => {
   const { mask, ...rest } = props;
 
-  return (
-      <input {...rest} />
-  );
+  return <input {...rest} />;
 };
 
 export default TextInputBase;
