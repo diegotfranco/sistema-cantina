@@ -1,13 +1,9 @@
-import { InputHTMLAttributes, ReactNode } from 'react';
+import { InputHTMLAttributes } from 'react';
 
-interface TextInputBaseProps extends InputHTMLAttributes<HTMLInputElement> {
-  mask?: string;
-  children?: ReactNode;
-}
+interface TextInputBaseProps extends InputHTMLAttributes<HTMLInputElement> {}
 const TextInputBase = (props: TextInputBaseProps) => {
-  const { mask, ...rest } = props;
-
-  return <input {...rest} />;
+  console.log(props);
+  return <input {...props} />;
 };
 
 export default TextInputBase;

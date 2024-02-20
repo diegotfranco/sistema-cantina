@@ -1,13 +1,13 @@
 import { Link } from '@tanstack/react-router';
-import BackgroundDimmed from 'components/BackgroundDimmed';
+import BackgroundImage from 'components/BackgroundImage';
 import Button from 'components/Button';
-import getImageURL from '../utils/image-util';
+import getImageURL from 'utils/image-util';
 import socialMediaEnum from 'modules/enums/socialMedia.enum';
 
 const LandingPage = () => {
   return (
     <>
-      <BackgroundDimmed name="main" />
+      <BackgroundImage />
       <div className="flex justify-center mt-16 mb-24">
         <img src={getImageURL('logo')} alt="log" />
       </div>

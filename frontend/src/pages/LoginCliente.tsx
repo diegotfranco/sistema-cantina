@@ -1,14 +1,9 @@
-import Banner from '../components/Banner';
+import Banner from 'components/Banner';
 import { useState } from 'react';
 import { Link } from '@tanstack/react-router';
 import { TextInput } from 'components/TextInput';
 import { Visibility, VisibilityOff } from '@mui/icons-material';
-// import { EyeOpenIcon, EyeClosedIcon } from '@radix-ui/react-icons';
-// import MaskTypes from '../types/mask.types';
-// import IMask from 'imask';
-// import { setMaskFormat } from '../helpers/maskHelpers';
-
-//https://imask.js.org/guide.html
+import MaskTypes from 'types/mask.types';
 
 const LoginCliente = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -19,14 +14,17 @@ const LoginCliente = () => {
       <div className="bg-slate-200 grow flex justify-center items-center">
         <div className="flex flex-col gap-4 border border-main pt-8 pb-32 px-6 rounded-md bg-white">
           <div className="flex flex-col">
-            <label className="font-medium text-dark" htmlFor="mobile">
+            <label className="font-medium text-dark" htmlFor="phone">
               Celular
             </label>
             <TextInput.Root className="flex items-center h-10 border border-gray-200 hover:border-gray-400 rounded-md px-2">
-              <TextInput.Base
+              <TextInput.BaseMasked
                 className="grow rounded-md outline-0"
-                id="mobile"
+                id="phone"
                 type="text"
+                mask={MaskTypes.phone}
+                unmask={true}
+                onAccept={(value) => console.log(value)}
               />
             </TextInput.Root>
           </div>
@@ -51,13 +49,10 @@ const LoginCliente = () => {
             </TextInput.Root>
           </div>
 
-          <Link
-            to="#"
-            className="flex items-center justify-center text-white rounded bg-main h-10 w-72 text-xl "
-          >
+          <button className="flex items-center justify-center text-white rounded bg-main h-10 w-72 text-xl ">
             Entrar
-          </Link>
-          <Link to="#" className="text-center underline">
+          </button>
+          <Link to="/signup" className="text-center underline">
             Ainda não tem cadastro?
           </Link>
         </div>

@@ -12,8 +12,8 @@ export default {
     },
     extend: {
       backgroundImage: {
-        'main-img': 'url("./src/assets/espetinho.jpg")',
-        'secondary-img': 'url("./src/assets/janta.jpg")',
+        "img-primary": "url('./src/assets/espetinho.jpg')",
+        "img-secondary": "url('./src/assets/janta.jpg')",
       },
       colors: {
         main: '#f97316',

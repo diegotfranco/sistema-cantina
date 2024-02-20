@@ -25,7 +25,11 @@
     "paths": {
       "assets/*": ["./src/assets/*"],
       "components/*": ["./src/components/*"],
-      "modules/*": ["./src/modules/*"]
+      "modules/*": ["./src/modules/*"],
+      "pages/*": ["./src/pages/*"],
+      "routes/*": ["./src/routes/*"],
+      "types/*": ["./src/types/*"],
+      "utils/*": ["./src/utils/*"]
     }
   },
   "include": ["src"],
