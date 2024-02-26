@@ -12,13 +12,16 @@ export default {
     },
     extend: {
       backgroundImage: {
-        "img-primary": "url('./src/assets/espetinho.jpg')",
-        "img-secondary": "url('./src/assets/janta.jpg')",
+        "img-primary": "url('./src/assets/espetinho.webp')",
+        "img-secondary": "url('./src/assets/janta.webp')",
       },
       colors: {
         main: '#f97316',
         dark: '#28282B',
       },
+      fontFamily:{
+        'open-sans': ['Open Sans', 'sans-serif']
+      }
     },
   },
   plugins: [require("tailwindcss-radix")({

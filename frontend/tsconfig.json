@@ -29,7 +29,9 @@
       "pages/*": ["./src/pages/*"],
       "routes/*": ["./src/routes/*"],
       "types/*": ["./src/types/*"],
-      "utils/*": ["./src/utils/*"]
+      "utils/*": ["./src/utils/*"],
+      "hooks/*": ["./src/hooks/*"],
+      "contexts/*": ["./src/contexts/*"]
     }
   },
   "include": ["src"],

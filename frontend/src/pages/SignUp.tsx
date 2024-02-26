@@ -1,10 +1,11 @@
 import Banner from 'components/Banner';
 import { useState } from 'react';
-import { TextInput } from 'components/TextInput';
-import { Visibility, VisibilityOff } from '@mui/icons-material';
+import TextInput from 'components/TextInput';
+import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai';
 import MaskTypes from 'types/mask.types';
 
 const SignUp = () => {
+  console.log('rendering SignUp...');
   const [showPassword, setShowPassword] = useState(false);
 
   return (
@@ -35,7 +36,7 @@ const SignUp = () => {
                 type="text"
                 mask={MaskTypes.phone}
                 unmask={true}
-                onAccept={(value) => console.log(value)}
+                // onAccept={(value) => console.log(value)}
               />
             </TextInput.Root>
           </div>
@@ -55,7 +56,7 @@ const SignUp = () => {
                 onMouseDown={(event: React.MouseEvent<HTMLButtonElement>) =>
                   event.preventDefault()
                 }
-                icon={showPassword ? VisibilityOff : Visibility}
+                icon={showPassword ? AiOutlineEyeInvisible : AiOutlineEye}
               />
             </TextInput.Root>
           </div>
@@ -75,7 +76,7 @@ const SignUp = () => {
                 onMouseDown={(event: React.MouseEvent<HTMLButtonElement>) =>
                   event.preventDefault()
                 }
-                icon={showPassword ? VisibilityOff : Visibility}
+                icon={showPassword ? AiOutlineEyeInvisible : AiOutlineEye}
               />
             </TextInput.Root>
           </div>

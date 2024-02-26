@@ -5,6 +5,7 @@ interface TextInputRootProps extends HTMLAttributes<HTMLDivElement> {
 }
 
 const TextInputRoot = ({ children, ...rest }: TextInputRootProps) => {
+  console.log('rendering TextInputRoot...');
   return <div {...rest}>{children}</div>;
 };
 

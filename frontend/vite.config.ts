@@ -23,7 +23,9 @@ export default defineConfig(({ mode }: ConfigEnv) => {
         "pages": path.resolve(__dirname, "./src/pages"),
         "types": path.resolve(__dirname, "./src/types"),
         "routes": path.resolve(__dirname, "./src/routes"),
-        "utils": path.resolve(__dirname, "./src/utils")
+        "utils": path.resolve(__dirname, "./src/utils"),
+        "hooks": path.resolve(__dirname, "./src/hooks"),
+        "contexts": path.resolve(__dirname, "./src/contexts")
       },
     },
   }

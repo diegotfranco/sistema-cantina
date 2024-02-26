@@ -5,10 +5,11 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   asChild?: boolean;
 }
 
-const Button = (props: ButtonProps) => {
-  const Component = props.asChild ? Slot : 'button';
+const Button = ({ asChild, ...rest }: ButtonProps) => {
+  console.log('rendering Button...');
+  const Component = asChild ? Slot : 'button';
 
-  return <Component {...props} />;
+  return <Component {...rest} />;
 };
 
 export default Button;

@@ -5,6 +5,7 @@ interface TextInputContentProps extends ButtonHTMLAttributes<HTMLButtonElement> 
 }
 
 const TextInputContent = ({ icon: Icon, ...rest }: TextInputContentProps) => {
+  console.log('rendering TextInputContent...');
   return (
     <button {...rest}>
       <Icon className="w-5 h-5 rounded-full text-inherit" />
