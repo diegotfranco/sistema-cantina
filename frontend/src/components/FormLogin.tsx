@@ -59,7 +59,6 @@ const FormLogin = () => {
             type="text"
             mask={MaskTypes.phone}
             unmask={true}
-            // onAccept={(value) => console.log(value)}
           />
         </TextInput.Root>
         {errors.phone && (

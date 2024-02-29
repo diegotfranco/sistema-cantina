@@ -13,6 +13,7 @@ import { createFileRoute } from '@tanstack/react-router'
 // Import Routes
 
 import { Route as rootRoute } from './routes/__root'
+import { Route as AuthenticatedImport } from './routes/authenticated'
 
 // Create Virtual Routes
 
@@ -38,6 +39,11 @@ const CardapioLazyRoute = CardapioLazyImport.update({
   getParentRoute: () => rootRoute,
 } as any).lazy(() => import('./routes/cardapio.lazy').then((d) => d.Route))
 
+const AuthenticatedRoute = AuthenticatedImport.update({
+  path: '/authenticated',
+  getParentRoute: () => rootRoute,
+} as any)
+
 const IndexLazyRoute = IndexLazyImport.update({
   path: '/',
   getParentRoute: () => rootRoute,
@@ -49,6 +55,10 @@ declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
     '/': {
       preLoaderRoute: typeof IndexLazyImport
+      parentRoute: typeof rootRoute
+    }
+    '/authenticated': {
+      preLoaderRoute: typeof AuthenticatedImport
       parentRoute: typeof rootRoute
     }
     '/cardapio': {
@@ -70,6 +80,7 @@ declare module '@tanstack/react-router' {
 
 export const routeTree = rootRoute.addChildren([
   IndexLazyRoute,
+  AuthenticatedRoute,
   CardapioLazyRoute,
   LoginLazyRoute,
   SignupLazyRoute,
