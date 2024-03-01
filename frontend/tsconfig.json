@@ -23,17 +23,18 @@
     /* Shadcn UI */
     "baseUrl": ".",
     "paths": {
-      "assets/*": ["./src/assets/*"],
-      "components/*": ["./src/components/*"],
-      "modules/*": ["./src/modules/*"],
-      "pages/*": ["./src/pages/*"],
-      "routes/*": ["./src/routes/*"],
-      "types/*": ["./src/types/*"],
-      "utils/*": ["./src/utils/*"],
-      "hooks/*": ["./src/hooks/*"],
-      "contexts/*": ["./src/contexts/*"]
+      "assets/*": ["src/assets/*"],
+      "components/*": ["src/components/*"],
+      "modules/*": ["src/modules/*"],
+      "pages/*": ["src/pages/*"],
+      "routes/*": ["src/routes/*"],
+      "types/*": ["src/types/*"],
+      "utils/*": ["src/utils/*"],
+      "hooks/*": ["src/hooks/*"],
+      "contexts/*": ["src/contexts/*"]
     }
   },
   "include": ["src"],
+  "exclude": ["node_modules", "dist"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

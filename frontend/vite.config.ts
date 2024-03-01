@@ -12,7 +12,7 @@ export default defineConfig(({ mode }: ConfigEnv) => {
     ],
     envDir: "./src",
     server: {
-      port: 5000,
+      port: 3000,
     },
     base: "./",
     resolve: {

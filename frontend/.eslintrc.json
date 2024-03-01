@@ -21,9 +21,7 @@
   },
   "env": {
     "browser": true,
-    "es2021": true,
-    "node": true,
-    "amd": true
+    "es2021": true
   },
   "extends": [
     "eslint:recommended",
@@ -39,6 +37,7 @@
     "react/react-in-jsx-scope": "off",
     "react/prop-types": "off",
     "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/no-explicit-any": "off",
     "simple-import-sort/imports": "error",
     "simple-import-sort/exports": "error",
     "jsx-a11y/anchor-is-valid": [
@@ -51,3 +50,4 @@
     ]
   }
 }
+
