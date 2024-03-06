@@ -4,8 +4,8 @@ import routes from 'routes/index';
 import cors, { CorsOptions } from 'cors';
 import cookieParser from 'cookie-parser';
 import { config } from 'dotenv';
-// import path from 'path';
 import { bodyErrorMiddleware, apiErrorMiddleware } from 'middlewares/error';
+// import path from 'path';
 
 config();
 const app: Express = express();

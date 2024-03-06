@@ -1,4 +1,5 @@
 import { Request, Response } from 'express';
+import * as db from 'db/index';
 // import { genPassword, validPassword, decodeJWT, issueJWT } from 'helpers/utils.ts';
 
 const register = async (req: Request, res: Response) => {
@@ -6,31 +7,26 @@ const register = async (req: Request, res: Response) => {
   if (!Object.keys(req.body).length)
     return res.status(400).json({ msg: 'solicitação mal construída, informações faltando ou incorretas' });
 
-  // Get a connection from the default pool
-  // let conn;
-  try {
-    // conn = await oracledb.getConnection();
+  // const client = new Client(process.env.DATABASE_URL);
 
-    // const saltHash = genPassword(req.body.senha);
-    delete req.body.senha;
+  // client.connect();
 
-    // const sql =
-    //   `INSERT INTO TI_USERS(EMAIL, MATRICULA, NOME, HASH, SALT, CODFIL)
-    // 	VALUES (:0, :1, :2, :3, :4, :5)`;
-    // const result = await conn.execute(sql, [req.body.email.toUpperCase(), req.body.matricula, req.body.nome.toUpperCase(), saltHash.hash, saltHash.salt, req.body.codfil]);
+  // const saltHash = genPassword(req.body.senha);
+  delete req.body.senha;
 
-    // if (!result.rowsAffected) throw new Error('algo deu errado.');
-    // else {
-    //   await conn.commit();
-    //   res.status(201).json({ msg: 'login criado com sucesso.' });
-    // }
-  } catch (err: any) {
-    console.log(err);
-    // if (err?.errorNum === 1) res.status(409).json({ msg: 'email já cadastrado, aguarde aprovação do seu acesso.' });
-    // else res.status(500).json({ msg: `${err}` });
-  } finally {
-    // await conn.close();
-  }
+  // const sql =
+  //   `INSERT INTO TI_USERS(EMAIL, MATRICULA, NOME, HASH, SALT, CODFIL)
+  // 	VALUES (:0, :1, :2, :3, :4, :5)`;
+  // const result = await conn.execute(sql, [req.body.email.toUpperCase(), req.body.matricula, req.body.nome.toUpperCase(), saltHash.hash, saltHash.salt, req.body.codfil]);
+
+  // if (!result.rowsAffected) throw new Error('algo deu errado.');
+  // else {
+  //   await conn.commit();
+  //   res.status(201).json({ msg: 'login criado com sucesso.' });
+  // }
+  // if (err?.errorNum === 1) res.status(409).json({ msg: 'email já cadastrado, aguarde aprovação do seu acesso.' });
+  // else res.status(500).json({ msg: `${err}` });
+  // await conn.close();
 };
 
 // logs the user
